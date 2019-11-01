@@ -26,18 +26,20 @@ public class Card
   		return face;
   	}
   	private String getSuit() {
-		
-		return null;
+		suit=SUITS[rand.nextInt(4)];
+		return suit;
 	}
 
 	public boolean equals(Object obj)
 	{
 		return false;
 	}
+	
 
   	//toString
   	public String toString() {
-		return FACES[face] + " of " + getSuit() + " | value= " + getValue();
+  		face = getValue();
+		return FACES[face] + " of " + getSuit() + " | value= " + face;
   		
   	}
 
