@@ -19,27 +19,35 @@ public class Card
 
   	//accessors
 
-  	public int getValue()
+  	public Card(int i, String string) {
+  		this.face = i;
+  		this.suit = string;
+	}
+	public Card() {
+		// TODO Auto-generated constructor stub
+		this.face = 0;
+		this.suit=" ";
+	}
+	public int getValue()
   	{
-  		face = rand.nextInt(14);
-  		
   		return face;
   	}
   	private String getSuit() {
-		suit=SUITS[rand.nextInt(4)];
+		
 		return suit;
 	}
 
 	public boolean equals(Object obj)
 	{
+		
 		return false;
 	}
 	
 
   	//toString
   	public String toString() {
-  		face = getValue();
-		return FACES[face] + " of " + getSuit() + " | value= " + face;
+  		
+		return FACES[face] + " of " + getSuit() + " | value= " + getValue();
   		
   	}
 

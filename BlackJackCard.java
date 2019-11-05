@@ -6,20 +6,31 @@ public class BlackJackCard extends Card
 
 
   	public BlackJackCard(int i, String string) {
-		// TODO Auto-generated constructor stub
+		
+  		super(i, string);
 	}
 
 	public BlackJackCard() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	public int getValue()
   	{
   		//enables you to build the value for the game into the card
   		//this makes writing the whole program a little easier
+		if (super.getValue() == 1) {
+			return 11;
+		}
+		else if(super.getValue() < 11 || super.getValue() > 1) {
+			return super.getValue();
+		}
+		else if(super.getValue() > 11) {
+			return 10;
+		}
+		else {
+			return 0;
+		}
 
-
-		return 0;
   	}
   	
  }
