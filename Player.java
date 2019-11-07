@@ -8,40 +8,58 @@ public class Player
 
    public Player ()
    {
+	   hand = new ArrayList<>();
+	   
+	   System.out.println("Welcome to BlackJack");
    }
 
    public Player (int score)
    {
+	   System.out.println("Wlecome to BlackJack. You have won " + score + "times.");
    }
 
    public void addCardToHand( Card temp )
    {
+	   hand.add(temp);
    }
 
    public void resetHand( )
    {
+	   hand.clear();
    }
 
    public  void setWinCount( int numwins )
    {
    }
 
-   public int getWinCount() { return 0; }
+   public int getWinCount() { return winCount; }
 
-   public int getHandSize() { return 0; }
+   public int getHandSize() { return hand.size(); }
 
    public int getHandValue()
    {
-      return 0;
+	   int value = 0;
+	   for(int i = 0;i<hand.size();i++) {
+		   value = value+hand.get(i).getValue();
+	   }
+      return value;
    }
 
    public  boolean  hit( )
    {
+	   Scanner input = new Scanner(System.in);
+	   System.out.println("Do you want to hit? y/n");
+	   String response = input.next();
+	   if(response.equals("y")) {
+		   return true;
+	   }
+	   
+	   
       return false;
    }
 
    public String toString()
    {
-      return "";
+      return "hand= " + hand + " - " +getHandValue();
    }
 }

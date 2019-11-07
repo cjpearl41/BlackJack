@@ -21,10 +21,10 @@ public class BlackJackCard extends Card
 		if (super.getValue() == 1) {
 			return 11;
 		}
-		else if(super.getValue() < 11 || super.getValue() > 1) {
+		else if(super.getValue() < 11 && super.getValue() > 1) {
 			return super.getValue();
 		}
-		else if(super.getValue() > 11) {
+		else if(super.getValue() > 10) {
 			return 10;
 		}
 		else {

@@ -26,7 +26,7 @@ public class Deck
 		
 			for(int x = 0;x<NUMSUITS;x++) {
 				for(int y = 1;y<NUMFACES+1;y++) {
-					Card c = new Card(y,SUITS[x]);
+					Card c = new BlackJackCard(y,SUITS[x]);
 					stackOfCards.add(c);
 				}
 			}
