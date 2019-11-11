@@ -10,7 +10,7 @@ public class Player
    {
 	   hand = new ArrayList<>();
 	   
-	   System.out.println("Welcome to BlackJack");
+	   
    }
 
    public Player (int score)
@@ -30,6 +30,7 @@ public class Player
 
    public  void setWinCount( int numwins )
    {
+	   winCount = numwins +1;
    }
 
    public int getWinCount() { return winCount; }

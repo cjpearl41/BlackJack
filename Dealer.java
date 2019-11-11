@@ -1,28 +1,39 @@
 
+
 public class Dealer extends Player
 {
 	//define a deck of cards
+	Deck deck = new Deck();
 
 	public Dealer() {
+		super();
 	}
 
 	public void  shuffle()
 	{
 	   //shuffle the deck
+		deck.shuffle();
 	}
 
 	public Card  deal(){
-	   return null;
+		
+	   return deck.nextCard();
 	}
 	
 	public int numCardsLeftInDeck()
 	{
-		return 0;
+		return deck.size();
 	}
 
 	public boolean hit()
 	{
-	   return false;
+		if(super.getHandValue() < 17) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	   
     }
 }
 
