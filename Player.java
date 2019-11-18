@@ -23,9 +23,10 @@ public class Player
 	   hand.add(temp);
    }
 
-   public void resetHand( )
+   public void resetHand()
    {
 	   hand.clear();
+	   getHandValue();
    }
 
    public  void setWinCount( int numwins )

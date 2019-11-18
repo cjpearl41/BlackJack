@@ -30,7 +30,10 @@ public class Dealer extends Player
 		if(super.getHandValue() < 17) {
 			return true;
 		}
-		else {
+		else if(super.getHandValue() > 17) {
+			return false;
+		}
+		else{
 			return false;
 		}
 	   
